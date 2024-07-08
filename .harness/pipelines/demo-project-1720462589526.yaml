@@ -1,0 +1,35 @@
+pipeline:
+  identifier: Build_random1223_demo_project_1720462590851
+  name: Build demo-project
+  orgIdentifier: default
+  projectIdentifier: demoproject
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github_OAuth_1720462582282
+        repoName: random1223/demo-project
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          caching:
+            enabled: true
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI

@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_random1223_demo_project_1720462590851-push-trigger-input-set
+  identifier: Build_random1223_demo_project_1720462590851pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: demoproject
+  pipeline:
+    identifier: Build_random1223_demo_project_1720462590851
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
